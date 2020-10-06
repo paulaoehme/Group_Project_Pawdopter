@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="app.test.devtips.firebaserealtimedatalistview.MainActivity">
+
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:orientation="vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/filtersBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/selectCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="16sp"
+                app:layout_constraintRight_toLeftOf="@+id/categoryFilter"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/categoryFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/selectSizeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="16sp"
+                app:layout_constraintRight_toLeftOf="@+id/sizeFilter"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sizeFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filtersBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/selectBreedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breed:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="16sp"
+                app:layout_constraintRight_toLeftOf="@+id/breedFilter"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/breedFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/animalsListView"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"></ListView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appBar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="40dp"
+        android:layout_below="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/appBar"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Please enter the information below"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+            <EditText
+                android:id="@+id/customerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:ems="10"
+                android:hint="Full name"
+                android:inputType="textPersonName"
+                android:textColorHint="#fb83cb"
+                android:textColor="#fb83cb"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/customerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Mobile number"
+                android:inputType="phone"
+                android:textColorHint="#fb83cb"
+                android:textColor="#fb83cb"
+                app:layout_constraintTop_toBottomOf="@+id/customerName" />
+
+            <EditText
+                android:id="@+id/customerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="E-mail*"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#fb83cb"
+                android:textColor="#fb83cb"
+                app:layout_constraintTop_toBottomOf="@+id/customerPhone" />
+
+            <TextView
+                android:id="@+id/emailNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="* This is going to be your username"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/customerEmail" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#fb83cb"
+                android:layout_gravity="center"
+                android:textColorHint="#fb83cb"
+                app:layout_constraintTop_toBottomOf="@+id/emailNote">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:textColor="#fb83cb"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/passNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="* Your password should be at least 8 digits long containing uppercase, lowercase, numbers and characters"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/customerPass" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#fb83cb"
+                android:textColorHint="#fb83cb"
+                app:layout_constraintTop_toBottomOf="@+id/customerPass" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerRepeatPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textColor="#fb83cb"
+                    android:hint="Re-enter password"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Submit"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:background="@drawable/button"
+                app:layout_constraintTop_toBottomOf="@+id/customerRepeatPass" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/submitBtn" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
