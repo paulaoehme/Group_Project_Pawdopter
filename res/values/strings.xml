@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Pawdopter</string>
+    <string name="update_name">Update profile</string>
+    <string name="logout_name">Logout</string>
+    <string name="category_dog">Dog</string>
+    <string name="category_cat">Cat</string>
+    <string name="size_small">Small</string>
+    <string name="size_medium">Medium</string>
+    <string name="size_large">Large</string>
+    <string-array name="breed">
+        <item>Golden Retriever</item>
+        <item>German Shepherd</item>
+        <item>Turkish Angora</item>
+        <item>Siberian</item>
+        <item>Poodle</item>
+        <item>Pug</item>
+        <item>Singapura</item>
+        <item>Persian</item>
+        <item>Sphynx</item>
+        <item>Dalmatian</item>
+        <item>Pinscher</item>
+        <item>Maine Coon</item>
+    </string-array>
+</resources>
